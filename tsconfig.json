@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "ESNext" /* Specify what module code is generated. */,
+    "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
+    "strictNullChecks": true /* When type checking, take into account 'null' and 'undefined'. */,
+    // "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    // "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "noImplicitOverride": true,
+    "declaration": true,
+    "lib": ["es2020"],
+    "rootDir": "src"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "esm": true,
+    "files": true
+  }
+}
