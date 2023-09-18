@@ -1,4 +1,4 @@
-import { Hero1, Hero2, Hero3, Hero4 } from './keyword';
+import { Hero1, Hero2, Hero3, Hero4, OneHero } from './keyword';
 // |
 export type StrNum = string | number;
 // &
@@ -41,3 +41,14 @@ export type TestResultKey = keyof TestResult;
 export type NewTestResult = {
   [k in TestResultKey]: TestResult[k];
 };
+
+// extends条件判断
+export type PickHero = Pick<Hero, 'name' | 'age'>;
+// 前面的是否可以赋给后面的，前面的范围是否更小（索引越多范围更小）
+export type ExtendsTest1 = Hero extends PickHero ? 'Yes' : 'No';
+export type ExtendsTest2 = PickHero extends Hero ? 'Yes' : 'No';
+function pickHero(req: PickHero) {
+  console.log(req);
+}
+const hero = new OneHero('Mountain Zeng');
+pickHero(hero);

@@ -2,7 +2,14 @@ export type TestingMachineType = 'MDA' | 'ICT' | 'B-BOX';
 export type LogType = 'FAIL' | 'RETEST' | 'RETRY' | 'PASS';
 export type IntervalType = 'hour' | 'day' | 'week' | 'month';
 export type Count<K extends string> = { [key in K]: { value: number } };
-
+export interface AggregationGroup {
+  doc_count_error_upper_bound: number;
+  sum_other_doc_count: number;
+}
+export interface AggregationBucketBase {
+  key: string;
+  doc_count: number;
+}
 export interface TestingTestCockpitReq {
   machine_type: TestingMachineType;
   line_id: string[];

@@ -3,7 +3,7 @@ export class RealPrivate {
   public typePublic: string = 'typePublic';
   #es6Private: string = 'es6Private';
 
-  publicFunc() {}
+  public publicFunc() {}
   private privateFunc() {}
   #es6PrivateFunc() {}
 }
