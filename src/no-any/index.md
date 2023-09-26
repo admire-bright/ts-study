@@ -1,4 +1,4 @@
-# *Type* script
+# *Type* script！no AnyScript
 
 ## [类型声明](./primary/declaration.ts)
 

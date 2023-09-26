@@ -2,7 +2,7 @@ export interface HeroBody {
   height: number;
   weight: number;
 }
-export type HeroHobby = 'read' | 'write' | 'run' | 'eat';
+export type HeroHobby = 'read' | 'write' | 'run' | 'eat' | 'code';
 export interface HeroJob {
   id: string;
   job: string;
@@ -19,9 +19,9 @@ export class OneHero {
   hobby = <HeroHobby>'eat';
 
   // 引用类型
-  body = { height: 180, weight: 70 } as HeroBody;
+  body = {height: 180, weight: 70} as HeroBody;
   skills: string[] = ['write bug', 'read a novel', 'play games'];
-  heroJob?: HeroJob = { id: '', job: '' };
+  heroJob?: HeroJob = {id: '', job: ''};
   helloWorld(): void {
     console.log('hello world');
   }
