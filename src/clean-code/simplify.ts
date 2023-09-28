@@ -25,7 +25,7 @@ interface Human {
   id?: string;
 }
 const my: Human = {
-  name: 'Mountain Zeng',
+  name: 'Admire Bright',
   age: 18,
 };
 //not

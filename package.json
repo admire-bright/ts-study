@@ -7,7 +7,7 @@
     "start:ts": "ts-node --experimental-specifier-resolution=node src",
     "start:js": "node --experimental-specifier-resolution=node ."
   },
-  "author": "",
+  "author": "Admire Bright",
   "license": "ISC",
   "type": "module",
   "devDependencies": {

@@ -5,8 +5,8 @@ process.on('unhandledRejection', console.log);
 // import { OtherHero } from './no-any/middle/keyword';
 // const otherHero = new OtherHero('Fiona Xu');
 // otherHero.helloWorld(otherHero.name);
-// otherHero.helloHero('Mountain Zeng');
-// otherHero.helloHero({ name: 'Mountain Zeng' });
+// otherHero.helloHero('Admire Bright');
+// otherHero.helloHero({ name: 'Admire Bright' });
 //#endregion
 
 //#region no-any 泛型函数

@@ -1,4 +1,4 @@
-import { HeroBody, HeroHobby, HeroJob } from '../primary/assertion';
+import {HeroBody, HeroHobby, HeroJob} from '../primary/assertion';
 
 export interface Hero1 {
   name: string;
@@ -27,16 +27,16 @@ export interface Hero extends Hero1, Hero2, Hero3, Hero4 {
 }
 
 export class OneHero implements Hero {
-  name: string = 'mountain zeng';
+  name: string = 'Admire Bright';
   age: number = 18;
   boy: boolean = true;
   money: null = null;
   feature: symbol = Symbol('human');
   hobby = <HeroHobby>'eat';
 
-  body = { height: 180, weight: 70 } as HeroBody;
+  body = {height: 180, weight: 70} as HeroBody;
   skills: string[] = ['write bug', 'read a novel', 'play games'];
-  heroJob?: HeroJob = { id: '', job: '' };
+  heroJob?: HeroJob = {id: '', job: ''};
   constructor(_name: string) {
     this.name = _name;
   }
@@ -63,8 +63,8 @@ export class OtherHero extends OneHero {
   }
   // 重载-参考Date
   helloHero(name: string): void;
-  helloHero(obj: { name: string }): void;
-  helloHero(params: string | { name: string }) {
+  helloHero(obj: {name: string}): void;
+  helloHero(params: string | {name: string}) {
     console.log('overload', `hello ${typeof params === 'string' ? params : params.name}`);
   }
 }

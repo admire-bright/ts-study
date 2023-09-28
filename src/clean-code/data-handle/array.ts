@@ -2,18 +2,18 @@ import _ from 'lodash';
 import {Hero} from '../../no-any/middle/keyword';
 
 const heroes: Partial<Hero>[] = [
-  {name: 'mountain zeng1', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng2', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng3', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng4', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'Fiona Xu1', age: 18, boy: false, money: 1000000, hobby: 'code'},
-  {name: 'Fiona Xu2', age: 18, boy: false, money: 1000000, hobby: 'code'},
-  {name: 'Fiona Xu3', age: 18, boy: false, money: 1000000, hobby: 'code'},
-  {name: 'Fiona Xu4', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright1', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright2', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright3', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright4', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright5', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright6', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright7', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright8', age: 18, boy: false, money: 1000000, hobby: 'code'},
 ];
 // 循环,可读性优先级：map & forEach > for & for...of
 const heroNames = heroes.map(hero => hero.name);
-const findHero = heroes.find(hero => hero.name === 'mountain zeng3');
+const findHero = heroes.find(hero => hero.name === 'Admire Bright3');
 
 const totalMoney = heroes
   .filter(hero => hero.money)
@@ -27,14 +27,14 @@ const [, , thridHero, , fiveHero] = heroes;
 
 // 比较
 const updateHeroes: Pick<Hero, 'name' | 'age' | 'boy' | 'money' | 'hobby'>[] = [
-  {name: 'mountain zeng1', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng2', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng3', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng4', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'mountain zeng5', age: 18, boy: true, money: 0, hobby: 'eat'},
-  {name: 'Fiona Xu1', age: 18, boy: false, money: 1000000, hobby: 'code'},
-  {name: 'Fiona Xu2', age: 18, boy: false, money: 1000000, hobby: 'code'},
-  {name: 'Fiona Xu3', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright1', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright2', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright3', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright4', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright5', age: 18, boy: true, money: 0, hobby: 'eat'},
+  {name: 'Admire Bright7', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright8', age: 18, boy: false, money: 1000000, hobby: 'code'},
+  {name: 'Admire Bright9', age: 18, boy: false, money: 1000000, hobby: 'code'},
 ];
 const createHeros = _.differenceBy(updateHeroes, heroes, 'name');
 const deleteHeros = _.differenceBy(heroes, updateHeroes, 'name');

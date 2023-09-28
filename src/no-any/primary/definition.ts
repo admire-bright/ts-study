@@ -8,7 +8,7 @@ type HeroHobby = 'read' | 'write' | 'run' | 'eat';
 // 类
 export class OneHero {
   // 值类型
-  name: string = 'mountain zeng';
+  name: string = 'Admire Bright';
   age: number = 18;
   boy: boolean = true;
   money: null = null;
@@ -16,7 +16,7 @@ export class OneHero {
   hobby: HeroHobby = 'eat';
 
   // 引用类型
-  body: HeroBody = { height: 180, weight: 70 };
+  body: HeroBody = {height: 180, weight: 70};
   skills: string[] = ['write bug', 'read a novel', 'play games'];
   helloWorld(): void {
     console.log('hello world');

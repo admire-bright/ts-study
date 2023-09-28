@@ -2,7 +2,7 @@ import {Hero} from '../../no-any/middle/keyword';
 import _ from 'lodash';
 
 const obj: Hero = {
-  name: 'mountain zeng',
+  name: 'Admire Bright',
   age: 18,
   boy: true,
   money: 0,

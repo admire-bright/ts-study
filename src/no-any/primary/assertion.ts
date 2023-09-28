@@ -11,7 +11,7 @@ export interface HeroJob {
 // 类
 export class OneHero {
   // 值类型
-  name: string = 'mountain zeng';
+  name: string = 'Admire Bright';
   age: number = 18;
   boy: boolean = true;
   money: null = null;

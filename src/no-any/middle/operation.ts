@@ -1,4 +1,4 @@
-import { Hero1, Hero2, Hero3, Hero4, OneHero } from './keyword';
+import {Hero1, Hero2, Hero3, Hero4, OneHero} from './keyword';
 // |
 export type StrNum = string | number;
 // &
@@ -50,5 +50,5 @@ export type ExtendsTest2 = PickHero extends Hero ? 'Yes' : 'No';
 function pickHero(req: PickHero) {
   console.log(req);
 }
-const hero = new OneHero('Mountain Zeng');
+const hero = new OneHero('Admire Bright');
 pickHero(hero);
