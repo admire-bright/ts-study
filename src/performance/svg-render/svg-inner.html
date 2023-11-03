@@ -1,0 +1,24 @@
+<div id='svg-container' style='width:100%'></div>
+<script src="./axios.min.js"></script>
+
+<script>
+  (async () => {
+    const div = document.getElementById('svg-container');
+    const apiUrl = 'http://[::1]:3000';
+    const svgFilename = '17090-1.TOP.svg';
+    const boxWidth = div.clientWidth;
+    console.time('1')
+    // const response = await axios({ url: `${apiUrl}/svg-render-handle/renderSvg/${svgFilename}?boxWidth=${boxWidth}` })
+    const response = await axios({ url: `./19W03-1.TOP.svg` })
+    // const response = await axios({ url: `https://lava-gerber.wzs-arm-prd-02.k8s.wistron.com/static/dist/FAE/17090-1.TOP.svg` })
+    console.timeEnd('1')
+    console.log(response);
+    // console.time('2')
+    // const svgText = await response.text()
+    // console.timeEnd('2')
+    // console.time('3')
+    // div.innerHTML = svgText;
+    // console.timeEnd('3')
+  })()
+  // embed.setAttribute('src', `${apiUrl}/svg-render-handle/renderSvg/${svgFilename}?boxWidth=${boxWidth}`);
+</script>

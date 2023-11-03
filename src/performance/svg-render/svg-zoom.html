@@ -1,0 +1,39 @@
+<!-- <script src='./svg-pan-zoom.min.js'></script>
+<embed id='svg-container' style='width:1800px' type="image/svg+xml" />
+
+<script>
+  const embed = document.querySelector('embed');
+  const apiUrl = 'http://10.55.128.73:3000';
+  const svgFilename = '201010-1.TOP.svg';
+  const req = {
+    boxWidth: embed.clientWidth,
+    machine_type: 'ICT',
+    key: 'Preshort',
+    sn: 'CN0N9Y5NWS3003AR00U0A05',
+    file_name: 'CN0N9Y5NWS3003AR00U0A05_Fail_20231030094623.txt',
+    log_time: 1698630383000,
+  }
+  const requestParams = Object.keys(req).map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(req[key])}`).join('&');
+  embed.setAttribute('src', `${apiUrl}/testing/basic-analysis/gerberRender/${svgFilename}?${requestParams}`);
+  embed.addEventListener('load', () => svgPanZoom(embed))
+</script> -->
+<html>
+<object id='temp' style='width: 100%;height: 575px;'></object>
+
+<script type="text/javascript">
+  const object = document.querySelector('object');
+  const apiUrl = 'http://10.55.128.73:3000';
+  const svgFilename = '201010-1.TOP.svg';
+  const req = {
+    boxWidth: object.clientWidth,
+    machine_type: 'ICT',
+    key: 'Preshort',
+    sn: 'CN0N9Y5NWS3003AR00U0A05',
+    file_name: 'CN0N9Y5NWS3003AR00U0A05_Fail_20231030094623.txt',
+    log_time: 1698630383000,
+  }
+  const requestParams = Object.keys(req).map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(req[key])}`).join('&');
+  object.setAttribute('data', `${apiUrl}/testing/basic-analysis/gerberZoomRender/${svgFilename}?${requestParams}`);
+</script>
+
+</html>

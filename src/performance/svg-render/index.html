@@ -1,0 +1,21 @@
+<embed id='svg-container' style='width:1800px' type="image/svg+xml" />
+
+<script>
+  const embed = document.querySelector('embed');
+  const apiUrl = 'http://[::1]:3000';
+  const svgFilename = '201010-1.TOP.svg';
+  const req = {
+    boxWidth: embed.clientWidth,
+    machine_type: 'ICT',
+    key: 'Preshort',
+    sn: 'CN0N9Y5NWS3003AR00U0A05',
+    file_name: 'CN0N9Y5NWS3003AR00U0A05_Fail_20231030094623.txt',
+    log_time: 1698630383000,
+  }
+  //{ "key":"Preshort", "sn":"CN0N9Y5NWS3003AR00U0A05", "filename":"CN0N9Y5NWS3003AR00U0A05_Fail_20231030094623.txt", "time":1698630383000, "machineType": ["ICT"] }
+  let requestParams = Object.keys(req).map((key) => {
+    return `${encodeURIComponent(key)}=${encodeURIComponent(req[key])}`;
+  }).join('&');
+  // console.log(requestParams);
+  embed.setAttribute('src', `${apiUrl}/testing/basic-analysis/gerberRender/${svgFilename}?${requestParams}`);
+</script>
